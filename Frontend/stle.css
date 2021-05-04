@@ -1,6 +1,6 @@
 .para{
-    align-items: flex-end;
+    align-content: flex-end;
 }
 .ff{
-    align-items: center;
+    align-content: center;
 }
