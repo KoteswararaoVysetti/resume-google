@@ -2,7 +2,8 @@ const express =require('express');
 const app=express();
 app.use(express.static(__dirname+"/Frontend"));
 app.get("/", function(req, res){
-    res.send("Welcome");
+   // res.send("Welcome");
+    res.sendFile(__dirname+"/Frontend/html/start.html");
 })
 app.get("/resume",function(req, res){
     res.sendFile(__dirname+"/Frontend/html/index2.html");
