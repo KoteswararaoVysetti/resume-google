@@ -4,6 +4,7 @@ table{
     width : 50% ;
 }
 div{
+    border: solid black;
     height : 100px ;
     width : 700px ;
 }
