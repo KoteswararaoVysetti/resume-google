@@ -8,6 +8,9 @@ app.get("/", function(req, res){
 app.get("/resume",function(req, res){
     res.sendFile(__dirname+"/Frontend/html/index2.html");
 })
+app.get("/color",function(req,res){
+    res.sendFile(__dirname+"/Frontend/html/icolor.html");
+})
 app.get("/google", function(req, res){
     res.sendFile(__dirname+"/Frontend/html/index.html");
 })
