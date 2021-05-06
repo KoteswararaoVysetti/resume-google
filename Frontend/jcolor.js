@@ -1,8 +1,8 @@
 function color()
 {
-    var r = document.getElementById("redc").value ;
-    var g = document.getElementById("greenc").value ;
-    var b = document.getElementById("bluec").value ;
+    var r = document.getElementById("r").value ;
+    var g = document.getElementById("g").value ;
+    var b = document.getElementById("b").value ;
     var R = Number(r).toString(16) ;
     var G = Number(g).toString(16) ;
     var B = Number(b).toString(16) ;
