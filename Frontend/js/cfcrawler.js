@@ -1,4 +1,5 @@
 var API="https://codeforces.com/api/";
+
 $(document).ready(function(){
 $("#main").show();
 $("#crawler").hide();
@@ -44,7 +45,7 @@ $("#but").click(function(){
                 if(ver != "")
                 {
                     x += "<td class = \"bor\" >" + ver + "</td>" ;
-                    k.add(ver);
+                    k.push(ver);
                     ver = "" ;
                 }
             }
@@ -53,9 +54,9 @@ $("#but").click(function(){
             {
                 innum = false ;
                 x += "<td class = \"bor\" >" + cnt + "</td></tr>" ;
-                k.add(cnt);
-                vr.add(k);
-                k=[];
+                k.push(cnt);
+                vr.push(k);
+                delete k;
                 cnt = "" ;
             }
             else if(innum) cnt += JSN[i] ;
