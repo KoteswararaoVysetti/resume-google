@@ -3,6 +3,10 @@ var API="https://codeforces.com/api/";
 $(document).ready(function(){
 $("#main").show();
 $("#crawler").hide();
+$("#im").click(function(){
+$("#main").show();
+$("#crawler").hide();
+});
 $("#but").click(function(){
     var h=$("#handle").val();
     if(!h){
