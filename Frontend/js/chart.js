@@ -12,13 +12,13 @@ function drawChart() {
     ['CodeChef', 107],
     ['CodeForces', 78],
     ['Vjudge', 83],
-    ['MentorPick', 117],
-    ['InterviewBit',1601]
+    ['MentorPick', 117]
   ]);
 
-  var options = {'title':'No.Of Problems Solved :',
-  'width':400,
-  'height':300};
+  var options = {'title':'No.Of Problems Solved by Koteswararao Vysetti :',
+  'width':600,
+  'height':500,
+};
 
   var chart = new google.visualization.PieChart(document.getElementById('p'));
   chart.draw(data, options);
