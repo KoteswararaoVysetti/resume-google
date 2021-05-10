@@ -20,5 +20,6 @@ function drawChart() {
   'width':400,
   'height':300};
 
-  var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-  chart.draw(data, options);}
+  var chart = new google.visualization.PieChart(document.getElementById('p'));
+  chart.draw(data, options);
+}
