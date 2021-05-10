@@ -12,7 +12,7 @@ function drawChart() {
     ['CodeChef', 107],
     ['CodeForces', 78],
     ['Vjudge', 83],
-    ['MentorPick', 117]
+    ['MentorPick', 117],
     ['InterviewBit',1601]
   ]);
 
