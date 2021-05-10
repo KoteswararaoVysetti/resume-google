@@ -18,7 +18,7 @@ $("#but").click(function(){
     var api=API+"user.info?handles="+h;
     console.log(api);
     $.get(api,function(data,status){
-    var x="<h1>Hello "+h+"</h1>";
+    var x="<br><br><h1>Hello "+h+" !! </h1>";
     $("#hello").html(x);
     api=API+"user.status?handle="+h;
     console.log(api);
