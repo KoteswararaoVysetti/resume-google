@@ -16,7 +16,9 @@ function drawChart() {
     ['InterviewBit',1601]
   ]);
 
- 
+  var options = {'title':'No.Of Problems Solved :',
+  'width':400,
+  'height':300};
 
   var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
   chart.draw(data, options);}
