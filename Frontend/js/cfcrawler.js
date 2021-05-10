@@ -27,12 +27,12 @@ $("#but").click(function(){
             verdicts[data.result[i].verdict]++ ;
         }
         x = "The Verdicts of " + h + "<br> &nbsp &nbsp";
-        x += "<table width = 25%>" ;
+        x += "<table width = 25% style=\"border: solid black;\" >" ;
         x += "<tr><th>Verdict</th><th>Count</th></tr>" ;
         var inword = false, innum = false ;
         var ver = "" ;
         var cnt = "" ;
-        var vr=[];
+       // var vr=[];
         var k=[];
         var JSN = JSON.stringify(verdicts);
         for(var i = 0 ; i < JSN.length ; i++)
@@ -54,15 +54,14 @@ $("#but").click(function(){
             {
                 innum = false ;
                 x += "<td class = \"bor\" >" + cnt + "</td></tr>" ;
-                k.push(cnt);
-                vr.push(k);
-                delete k;
+                k.push(parseInt(cnt));
+                console.log(k);
                 cnt = "" ;
             }
             else if(innum) cnt += JSN[i] ;
             else if(inword) ver += JSN[i] ;
         }
-        x += "</table>" ;
+        x += "</table><br><br>" ;
         $("#table").html(x);
         // chart begining
         google.charts.load('current', {packages:['corechart']});
@@ -74,11 +73,11 @@ function drawChart() {
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Topping');
   data.addColumn('number', 'Slices');
-  data.addRows(vr);
-
-  var options = {'title':'No.Of Problems Solved by Koteswararao Vysetti :',
-  'width':600,
-  'height':500,
+//  data.addRows(vr);
+for (var i=0;i<k.length;i+=2) {data.addRow([k[i],k[i+1]]);}
+  var options = {'title':'Verdicts graph of '+h+" : ",
+  'width':700,
+  'height':600,
 };
 
   var chart = new google.visualization.PieChart(document.getElementById('chartr'));
