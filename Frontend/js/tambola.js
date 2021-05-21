@@ -1,5 +1,5 @@
 
-var numbers = [];
+var numbers = [],br=0;
 for(let i=1;i<=90;i++)numbers.push(i);
 
 function display(){
@@ -41,16 +41,20 @@ $(document).ready(()=>{
 
 
     $("#start").click(()=>{
-
+        br=0;
 
         var time = setInterval(()=>{
-
+            if(br) {
+                clearInterval(time);
+            }
             if(numbers.length==0){
                 alert("Game is Completed !!");
                 alert("Press Clear Board, to start a New Game")
                 clearInterval(time);
             }
-    
+            if(br) {
+                clearInterval(time);
+            }
             var n = numbers[ Math.floor(Math.random()*numbers.length) ]
             if(numbers.includes(n)){
                 $('#pp').html(n);
@@ -60,7 +64,9 @@ $(document).ready(()=>{
                 addNum(n.toString());
     
             }
-
+            if(br) {
+                clearInterval(time);
+            }
         }, 2500);
 
 
@@ -74,7 +80,11 @@ $(document).ready(()=>{
         $('td').css({
             "background-color" : "white"
         });
+        br=1;
 
+    })
+    $("#stop").click(()=>{
+        br=1;
     })
 
 
