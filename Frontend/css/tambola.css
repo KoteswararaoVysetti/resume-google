@@ -6,6 +6,8 @@
 }
 
 #pp{
+    background-color: black;
+    color: rgb(102, 213, 247);
     text-align: center;
     vertical-align: middle;
     font-size: 75px;
@@ -14,9 +16,13 @@
 #board{
     display: inline-table;
 }
-tr{
-border:solid black;
-}
+
 td{
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top:5px;
+     padding-bottom: 5px ;
+    padding-left:7px;
+    padding-right: 7px;
 border:solid black;
 }
