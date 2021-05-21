@@ -1,0 +1,22 @@
+#title{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#pp{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 75px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#board{
+    display: inline-table;
+}
+tr{
+border:solid black;
+}
+td{
+border:solid black;
+}

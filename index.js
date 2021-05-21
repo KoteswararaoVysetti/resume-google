@@ -51,6 +51,9 @@ app.get("/chart",function(req,res){
 app.get("/crudOperations",function(req,res){
     res.sendFile(__dirname+"/Frontend/html/crud.html");
 })
+app.get("/Tambola",function(req,res){
+    res.sendFile(__dirname+"/Frontend/html/tambola.html");
+})
 //API
 app.get("/crud", courselib.getall);
 app.delete("/crud/:idd", courselib.deleteone);
