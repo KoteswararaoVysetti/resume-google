@@ -1,5 +1,5 @@
 
-var numbers = [],br=0;
+var numbers = [],br=0,marked=[];
 for(let i=1;i<=90;i++)numbers.push(i);
 
 function display(){
@@ -28,6 +28,12 @@ function display(){
 
 
 function addNum(n){
+    marked.push(n);
+    var b="";
+    for(let i=0;i<marked.length;i++){
+        b+=marked[i]+' ,';
+    }
+     $("#order").html("<p>ORDER : " + b +" </p>");
     $('#'+n).css({
         "background-color" : "rgb(102, 213, 247)"
     });
@@ -38,8 +44,7 @@ function addNum(n){
 $(document).ready(()=>{
 
     display();
-
-
+  
     $("#start").click(()=>{
         br=0;
 
@@ -68,7 +73,7 @@ $(document).ready(()=>{
                 clearInterval(time);
             }
         }, 2500);
-
+if(br) return;
 
     })
 
@@ -81,7 +86,8 @@ $(document).ready(()=>{
             "background-color" : "white"
         });
         br=1;
-
+$('#order').html('');
+marked=[];
     })
     $("#stop").click(()=>{
         br=1;
